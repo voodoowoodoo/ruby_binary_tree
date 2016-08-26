@@ -19,11 +19,20 @@ class BinaryTree
 	# Getter and setter for the root node of the binary search tree
 	attr_accessor :root
 
-	# Takes an array, and builds a BinaryTree object out of this array
+	# Takes original array, and builds a BinaryTree object out of this array
 	def initialize(array)
 
 		# Sets the value of the root node to the first value in the array.
 		@root = Node.new(array[0])
+
+	end
+
+	# Takes a value and a node, and adds a new node with that value as its @value variable to the tree at the appropriate place in the tree.
+	def add(value, node = @root)
+		if value > node.value
+		#Code for adding node to the right
+		else
+		#Code for adding node to the left
 	end
 
 	# Returns the node object containing value entered, searching the tree breadth first, using a queue.
