@@ -16,8 +16,14 @@ class BinaryTree
 		end
 	end
 
+	# Getter and setter for the root node of the binary search tree
+	attr_accessor :root
+
 	# Takes an array, and builds a BinaryTree object out of this array
-	def initialize(array)	
+	def initialize(array)
+
+		# Sets the value of the root node to the first value in the array.
+		@root = Node.new(array[0])
 	end
 
 	# Returns the node object containing value entered, searching the tree breadth first, using a queue.
