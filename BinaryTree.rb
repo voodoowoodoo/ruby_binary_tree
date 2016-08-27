@@ -49,6 +49,11 @@ class BinaryTree
 				add(value, node.left_child)
 			end
 		end
+	end
+
+	# Recursive method that represents the current tree and all it's nodes as a string.
+	def to_s
+	end
 	
 	# Returns the node object containing value entered, searching the tree breadth first, using a queue.
 	def breadth_first_search(value)
