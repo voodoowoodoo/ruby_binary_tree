@@ -51,8 +51,8 @@ class BinaryTree
 		end
 	end
 
-	# Recursive method that represents the current tree and all it's nodes as a string.
-	def to_s
+	# Recursive method that prints the current tree structure to the console.
+	def show(node = @root, prefix = "")
 	end
 	
 	# Returns the node object containing value entered, searching the tree breadth first, using a queue.
