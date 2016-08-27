@@ -21,6 +21,9 @@ class BinaryTree
 
 	# Takes original array, and builds a BinaryTree object out of this array
 	def initialize(array)
+
+		# First value in the array becomes the root of the new tree
+		@root = Node.new(array[0])
 	end
 	
 	# Returns the node object containing value entered, searching the tree breadth first, using a queue.
