@@ -40,6 +40,7 @@ class BinaryTree
 			else
 				add(value, node.right_child)
 			end
+		end
 		
 		# Add to the left of the current node
 		else
