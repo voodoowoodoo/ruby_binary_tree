@@ -23,8 +23,32 @@ class BinaryTree
 	def initialize(array)
 
 		# First value in the array becomes the root of the new tree
-		@root = Node.new(array[0])
+		@root = Node.new(array[0], nil, nil, nil)
+
+		# Loops through the rest of the array, adding the values to the correct spot in the binary tree in the order that they come up in the array
+		(array.length - 1).times do |i|
+			add(array[i + 1])
+		end
 	end
+
+	# Recursive method to add a new node containing value to the tree, searching for the right place to put the new leaf from root
+	def add(value, node = @root)
+		# Add to the right of the current node
+		if  value > node.value
+			if node.right_child == nil
+				node.right_child = Node.new(value, node, nil, nil)
+			else
+				add(value, node.right_child)
+			end
+		
+		# Add to the left of the current node
+		else
+			if node.left_child == nil
+				node.left_child = Node.new(value, node, nil, nil)
+			else
+				add(value, node.left_child)
+			end
+		end
 	
 	# Returns the node object containing value entered, searching the tree breadth first, using a queue.
 	def breadth_first_search(value)
