@@ -9,3 +9,5 @@ the BinaryTree class includes multiple usefull working methods:
 `new(array)`: Creates a new BinaryTree object. The root of this tree wil contain the value of array[0], it will then loop through the passed array, adding each index at the appropriate place of the binary tree. Array should be an array of integers.
 
 `add(value, node = @root)`: Adds a new node containing the value to the current BinaryTree object at the appropriate place in the tree. Searching for the correct link to place this node starts from the root node by default, so only an integer needs to be passed. 
+
+`breadth_first_search(value)`: Searches the tree for a node containing value in a breadth fist manner. Returns the node object if a node with that value is encountered and breaks the search. Returns nil if no such node is encountered.
