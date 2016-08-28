@@ -56,6 +56,27 @@ class BinaryTree
 	
 	# Returns the node object containing value entered, searching the tree breadth first, using a queue.
 	def breadth_first_search(value)
+		queue = [@root]
+
+		while queue.length > 0
+			
+			# Breaks the search the first time a node with value is encountered
+			if queue[0].value == value
+				return queue[0]
+				break
+			end
+
+			# Appends the children of the node to the queue if they exist
+			if queue[0].left_child != nil
+				queue << queue[0].left_child
+			end
+			if queue[0].right_child != nil
+				queue << queue[0].right_child
+			end
+
+			# Removes the current queue[0], and places the next node at the front of the queue
+			queue.shift
+		end
 	end
 
 	# Returns the node object containing value entered, searching the tree depth first, using a stack.
